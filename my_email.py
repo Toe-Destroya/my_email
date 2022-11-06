@@ -12,7 +12,9 @@ user = 'toedestroya@gmail.com'
 
 try:
     with open ('app-pass') as f:
-        passw = f.readline()
+        for num, line in enumerate(f): 
+            if num == 0:
+                passw = line 
 except:
     print ('Add your gmail app password to a file named api"API-key"')
     sys.exit()
